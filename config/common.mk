@@ -237,7 +237,7 @@ PRODUCT_VERSION_MAJOR = 71
 PRODUCT_VERSION_MINOR = 2
 
 # Set MK_BUILDTYPE and WITH_DEXPREOPT support
-ifneq ($(filter mokee buildbot-0x,$(shell python -c 'import os;print os.uname()[1][:11]')),)
+ifneq ($(filter mokee buildbot-0x,$(shell python -c 'import os;print (os.uname()[1][:11])')),)
     ifdef MK_NIGHTLY
         MK_BUILDTYPE := NIGHTLY
     else ifdef MK_RELEASE
