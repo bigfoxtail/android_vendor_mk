@@ -32,9 +32,12 @@ ifneq ($(TARGET_BUILD_VARIANT),eng)
     ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
   else
     # Enable ADB authentication
-    ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+    ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=0
   endif
 endif
+
+ADDITIONAL_DEFAULT_PROPERTIES += service.adb.tcp.port=5555
+ADDITIONAL_DEFAULT_PROPERTIES += ro.debuggable=1
 
 # Copy over the translator to the device
 PRODUCT_COPY_FILES += \
