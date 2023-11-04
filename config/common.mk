@@ -90,7 +90,7 @@ PRODUCT_COPY_FILES += \
     vendor/mk/config/permissions/com.mokee.android.xml:system/etc/permissions/com.mokee.android.xml
 
 # Theme engine
-include vendor/mk/config/themes_common.mk
+#include vendor/mk/config/themes_common.mk
 
 ifneq ($(TARGET_DISABLE_MKSDK), true)
 # MKSDK
@@ -107,14 +107,16 @@ PRODUCT_PACKAGES += \
     bootanimation.zip
 
 # Required MK packages
+
+#    MKAudioService \
+#    WeatherManagerService
+#    Profiles
+
 PRODUCT_PACKAGES += \
     BluetoothExt \
     libbt-logClient \
-    MKAudioService \
     MKParts \
-    Development \
-    Profiles \
-    WeatherManagerService
+    Development
 
 # Optional MK packages
 PRODUCT_PACKAGES += \
@@ -129,21 +131,23 @@ PRODUCT_PACKAGES += \
     librsjni
 
 # Custom MK packages
+
+#    Aegis \
+#    LockClock \
+#    MKCenter \
+#    MKUpdateVerification \
+#    MoKeeWeatherProvider \
+#    WeatherProvider
+#    MoKeeSetupWizard \
+#    ExactCalculator \
+
 PRODUCT_PACKAGES += \
-    Aegis \
-    ExactCalculator \
-    LockClock \
-    MKCenter \
     MKSettingsProvider \
-    MKUpdateVerification \
-    MoKeeSetupWizard \
-    MoKeeWeatherProvider \
-    WallpaperPicker \
-    WeatherProvider
+    WallpaperPicker
 
 # Exchange support
-PRODUCT_PACKAGES += \
-    Exchange2
+#PRODUCT_PACKAGES += \
+#    Exchange2
 
 # Extra tools in MK
 PRODUCT_PACKAGES += \
