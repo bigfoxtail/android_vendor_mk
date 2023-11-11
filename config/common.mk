@@ -118,12 +118,13 @@ PRODUCT_PACKAGES += \
     MKParts \
     Development
 
+#    LiveWallpapersPicker \
+#    PhotoTable \
+#    Terminal
+
 # Optional MK packages
 PRODUCT_PACKAGES += \
-    libemoji \
-    LiveWallpapersPicker \
-    PhotoTable \
-    Terminal
+    libemoji
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
@@ -140,10 +141,10 @@ PRODUCT_PACKAGES += \
 #    WeatherProvider
 #    MoKeeSetupWizard \
 #    ExactCalculator \
+#    WallpaperPicker
 
 PRODUCT_PACKAGES += \
-    MKSettingsProvider \
-    WallpaperPicker
+    MKSettingsProvider
 
 # Exchange support
 #PRODUCT_PACKAGES += \
